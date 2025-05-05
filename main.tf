@@ -3,10 +3,6 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "jenkins-terraform-bucket-${random_id.bucket_id.hex}"
+  bucket = "jenkins-terraform-bucket"
   acl    = "private"
-}
-
-resource "random_id" "bucket_id" {
-  byte_length = 4
 }
